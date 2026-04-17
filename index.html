@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michel AYENA — Fullstack Developer & DevSecOps Enthusiast. Expert Laravel, Next.js, CI/CD, SAST/SCA. Bâtisseur d'écosystèmes SaaS sécurisés et performants.">
+    <meta name="keywords" content="Fullstack Developer, DevSecOps, Laravel, Next.js, React, TypeScript, Docker, CI/CD, SAST, SCA, SaaS, Sécurité, Michel AYENA">
+    <meta name="author" content="Michel AYENA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Michel AYENA — Fullstack Developer & DevSecOps Enthusiast">
+    <meta property="og:description" content="Je bâtis des écosystèmes SaaS sécurisés (SAST/SCA), performants et prêts pour la production.">
+    <meta property="og:type" content="website">
+    
+    <title>Michel AYENA — Fullstack Developer & DevSecOps Enthusiast</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/fill/style.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>MA<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#philosophy" class="nav-link">Philosophie</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="ph ph-shield-check"></i>
+                <span>Disponible pour de nouveaux projets</span>
+            </div>
+            <h1 class="hero-name">
+                <span class="hero-first">Michel</span>
+                <span class="hero-last">AYENA</span>
+            </h1>
+            <p class="hero-title">
+                <span class="title-main">Fullstack Developer</span>
+                <span class="title-separator">&</span>
+                <span class="title-accent">DevSecOps Enthusiast</span>
+            </p>
+            <p class="hero-subtitle">
+                Expertise <strong>Laravel</strong>, <strong>Next.js</strong> & <strong>Automatisation de Sécurité</strong> · <strong>Vibe Coder</strong> 🎵
+            </p>
+            <blockquote class="hero-quote">
+                <i class="ph ph-quotes"></i>
+                Je ne me contente pas de coder des fonctionnalités. Je bâtis des écosystèmes SaaS 
+                <strong>sécurisés (SAST/SCA)</strong>, performants et prêts pour la production.
+            </blockquote>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary" id="cta-projects">
+                    <i class="ph ph-rocket-launch"></i>
+                    <span>Explorer mes projets</span>
+                </a>
+                <a href="#contact" class="btn btn-outline" id="cta-contact">
+                    <i class="ph ph-chat-circle-dots"></i>
+                    <span>Discutons</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projets SaaS</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">CI/CD Automatisé</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+                    <span class="stat-label">Monitoring Actif</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">~/michel-ayena</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command typing" id="cmd-1">whoami</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="ph ph-user-circle"></i> À propos</span>
+                <h2 class="section-title">Un développeur qui <span class="gradient-text">sécurise</span> ce qu'il construit</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-card-main">
+                    <div class="about-icon">
+                        <i class="ph-fill ph-code"></i>
+                    </div>
+                    <h3>Ingénieur Fullstack</h3>
+                    <p>Spécialisé dans la construction d'applications SaaS complètes avec <strong>Laravel</strong> et <strong>Next.js</strong>. De l'architecture de la base de données à l'interface utilisateur, je maîtrise l'ensemble de la chaîne. Tous mes projets sont <strong>100% Dockerisés</strong>.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="ph-fill ph-shield-checkered"></i>
+                    </div>
+                    <h3>DevSecOps</h3>
+                    <p>Chaque projet que je livre passe par des audits <strong>SAST/SCA</strong> automatisés. La sécurité n'est pas une option, c'est la fondation.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="ph-fill ph-music-notes"></i>
+                    </div>
+                    <h3>Vibe Coder</h3>
+                    <p>J'embrasse le <strong>Vibe Coding</strong> : je combine intuition créative et outils IA comme <strong>Antigravity</strong> pour transformer des idées en produits à une vitesse industrielle.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="ph-fill ph-globe-hemisphere-west"></i>
+                    </div>
+                    <h3>Impact Local</h3>
+                    <p>Je conçois des solutions technologiques qui répondent aux défis concrets du Bénin et de l'Afrique de l'Ouest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="ph ph-stack"></i> Compétences</span>
+                <h2 class="section-title">Stack technique <span class="gradient-text">organisé par piliers</span></h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Frontend Pillar -->
+                <div class="skill-pillar" data-pillar="frontend">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="ph-fill ph-browser"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                        <span class="pillar-tag">Interface & UX</span>
+                    </div>
+                    <div class="pillar-techs">
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="20" height="20">
+                            <span>React 19</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" width="20" height="20">
+                            <span>Next.js</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="20" height="20">
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-chip">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 54 33" fill="none"><path fill="#38bdf8" fill-rule="evenodd" d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z" clip-rule="evenodd"/></svg>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="pillar-bar">
+                        <div class="bar-fill" data-width="92"></div>
+                    </div>
+                </div>
+
+                <!-- Backend Pillar -->
+                <div class="skill-pillar" data-pillar="backend">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="ph-fill ph-database"></i>
+                        </div>
+                        <h3>Backend</h3>
+                        <span class="pillar-tag">Architecture & API</span>
+                    </div>
+                    <div class="pillar-techs">
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" width="20" height="20">
+                            <span>Laravel 11/12</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="20" height="20">
+                            <span>PHP 8.3</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="20" height="20">
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="20" height="20">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="20" height="20">
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" width="20" height="20">
+                            <span>Redis</span>
+                        </div>
+                        <div class="tech-chip tech-chip-highlight">
+                            <i class="ph ph-plugs-connected"></i>
+                            <span>API REST</span>
+                        </div>
+                    </div>
+                    <div class="pillar-bar">
+                        <div class="bar-fill" data-width="95"></div>
+                    </div>
+                </div>
+
+                <!-- DevSecOps Pillar -->
+                <div class="skill-pillar skill-pillar-featured" data-pillar="devsecops">
+                    <div class="featured-badge">
+                        <i class="ph ph-star-four"></i> Core Expertise
+                    </div>
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="ph-fill ph-shield-check"></i>
+                        </div>
+                        <h3>DevSecOps & Cloud</h3>
+                        <span class="pillar-tag">Sécurité & Déploiement</span>
+                    </div>
+                    <div class="pillar-techs">
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" width="20" height="20">
+                            <span>GitHub Actions</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" width="20" height="20">
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-chip tech-chip-security">
+                            <i class="ph ph-scan"></i>
+                            <span>SAST (Semgrep)</span>
+                        </div>
+                        <div class="tech-chip tech-chip-security">
+                            <i class="ph ph-package"></i>
+                            <span>SCA (Snyk)</span>
+                        </div>
+                        <div class="tech-chip">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" alt="Cloudflare" width="20" height="20">
+                            <span>Cloudflare</span>
+                        </div>
+                    </div>
+                    <div class="pillar-bar">
+                        <div class="bar-fill" data-width="88"></div>
+                    </div>
+                </div>
+
+                <!-- Monitoring Pillar -->
+                <div class="skill-pillar" data-pillar="monitoring">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="ph-fill ph-activity"></i>
+                        </div>
+                        <h3>Monitoring</h3>
+                        <span class="pillar-tag">Surveillance & Fiabilité</span>
+                    </div>
+                    <div class="pillar-techs">
+                        <div class="tech-chip">
+                            <i class="ph ph-heartbeat"></i>
+                            <span>UptimeRobot</span>
+                        </div>
+                        <div class="tech-chip">
+                            <i class="ph ph-wall"></i>
+                            <span>Fail2Ban</span>
+                        </div>
+                    </div>
+                    <div class="pillar-bar">
+                        <div class="bar-fill" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="ph ph-folders"></i> Projets Phares</span>
+                <h2 class="section-title">Des systèmes <span class="gradient-text">industriels</span>, pas des prototypes</h2>
+                <p class="section-desc">Chaque projet est architecturé pour la production, sécurisé par design et automatisé de bout en bout.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- O-229 Education -->
+                <article class="project-card project-card-featured" id="project-education">
+                    <div class="project-badge">
+                        <i class="ph ph-crown"></i> Projet Phare
+                    </div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="ph-fill ph-graduation-cap"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3>O-229 Education</h3>
+                            <span class="project-type">SaaS Multi-tenant</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Plateforme de dématérialisation scolaire avec architecture industrielle pour la gestion complète des établissements.</p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="ph ph-lightning"></i>
+                            <div>
+                                <strong>Innovation</strong>
+                                <span>Architecture Multi-tenant avec isolation stricte des données pour la confidentialité inter-établissements.</span>
+                            </div>
+                        </div>
+                        <div class="highlight highlight-security">
+                            <i class="ph ph-shield-check"></i>
+                            <div>
+                                <strong>Sécurité</strong>
+                                <span>Audit systématique SCA des dépendances pour protéger les données académiques sensibles.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-chip">Laravel</span>
+                        <span class="stack-chip">Next.js</span>
+                        <span class="stack-chip">PostgreSQL (Schémas isolés)</span>
+                        <span class="stack-chip">Multi-tenancy</span>
+                        <span class="stack-chip">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayenamichel7-art/o-229-Education" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source sur GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- OpenZap -->
+                <article class="project-card" id="project-openzap">
+                    <div class="project-header">
+                        <div class="project-icon project-icon-green">
+                            <i class="ph-fill ph-whatsapp-logo"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3>OpenZap</h3>
+                            <span class="project-type">Infrastructure de Communication Massive</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Solution SaaS d'orchestration de campagnes WhatsApp à grande échelle avec gestion de flux asynchrones.</p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="ph ph-chart-line-up"></i>
+                            <div>
+                                <strong>Performance</strong>
+                                <span>Flux asynchrones via Redis & Laravel Jobs pour des volumes massifs sans latence.</span>
+                            </div>
+                        </div>
+                        <div class="highlight highlight-security">
+                            <i class="ph ph-shield-check"></i>
+                            <div>
+                                <strong>Sécurité</strong>
+                                <span>Algorithmes anti-bannissement et sécurisation des API endpoints.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-chip">Laravel</span>
+                        <span class="stack-chip">Redis</span>
+                        <span class="stack-chip">API WhatsApp</span>
+                        <span class="stack-chip">Jobs Queue</span>
+                        <span class="stack-chip">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayenamichel7-art/OpenZap" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source sur GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ProDesign -->
+                <article class="project-card" id="project-prodesign">
+                    <div class="project-header">
+                        <div class="project-icon project-icon-purple">
+                            <i class="ph-fill ph-paint-brush-broad"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3>ProDesign</h3>
+                            <span class="project-type">Automatisation Créative IA</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Plateforme haute performance pour agences créatives, combinant la rapidité de Rust et l'intelligence artificielle.</p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="ph ph-cpu"></i>
+                            <div>
+                                <strong>Technique</strong>
+                                <span>Hybridation Rust + IA (Python) + Interface React pour un rendu ultra-rapide.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-chip">Rust</span>
+                        <span class="stack-chip">Python / IA</span>
+                        <span class="stack-chip">React</span>
+                        <span class="stack-chip">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayenamichel7-art/ProDesign" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source sur GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Marketplace -->
+                <article class="project-card" id="project-marketplace">
+                    <div class="project-header">
+                        <div class="project-icon project-icon-orange">
+                            <i class="ph-fill ph-storefront"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3>O-229 Marketplace</h3>
+                            <span class="project-type">E-commerce Local</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Solution robuste de commerce électronique connectée à l'écosystème WhatsApp pour le Bénin.</p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="ph ph-globe"></i>
+                            <div>
+                                <strong>Impact</strong>
+                                <span>Intégration profonde WhatsApp pour transformer l'expérience d'achat au Bénin.</span>
+                            </div>
+                        </div>
+                        <div class="highlight highlight-security">
+                            <i class="ph ph-git-branch"></i>
+                            <div>
+                                <strong>DevOps</strong>
+                                <span>Pipeline CI/CD automatisé vers Vercel avec scan de vulnérabilités intégré.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-chip">React</span>
+                        <span class="stack-chip">Tailwind</span>
+                        <span class="stack-chip">GitHub Actions</span>
+                        <span class="stack-chip">Vercel</span>
+                        <span class="stack-chip">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayenamichel7-art/o229-marketplace" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source sur GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- DigiFix -->
+                <article class="project-card" id="project-digifix">
+                    <div class="project-header">
+                        <div class="project-icon project-icon-cyan">
+                            <i class="ph-fill ph-wrench"></i>
+                        </div>
+                        <div class="project-meta">
+                            <h3>DigiFix</h3>
+                            <span class="project-type">Gestion de Services Digitaux</span>
+                        </div>
+                    </div>
+                    <p class="project-desc">Application conteneurisée pour la gestion de services avec parité parfaite dev/production.</p>
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <i class="ph ph-cube"></i>
+                            <div>
+                                <strong>Architecture</strong>
+                                <span>Stack moderne Laravel + React/Vite, entièrement conteneurisé avec Docker.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-stack">
+                        <span class="stack-chip">Laravel</span>
+                        <span class="stack-chip">React / Vite</span>
+                        <span class="stack-chip">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ayenamichel7-art/digifix" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le code source sur GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="section philosophy-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="ph ph-compass"></i> Philosophie</span>
+                <h2 class="section-title">Ma promesse : <span class="gradient-text">L'Excellence par la Rigueur</span></h2>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-intro">
+                    <p>Chaque ligne de code que je pousse passe par un workflow rigoureux. Je ne livre pas du code qui "marche" — je livre du code <strong>industriel, sécurisé et conteneurisé</strong>. Le Vibe Coding me donne la vitesse, la rigueur me donne la fiabilité.</p>
+                </div>
+                <div class="workflow-steps">
+                    <div class="workflow-step" data-step="01">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="ph-fill ph-scan"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Analyse Statique (SAST)</h3>
+                            <p>Chaque commit est scanné par Semgrep pour détecter les vulnérabilités avant qu'elles n'atteignent la production.</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="workflow-step" data-step="02">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="ph-fill ph-package"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Audit de Dépendances (SCA)</h3>
+                            <p>Snyk et Dependabot surveillent en continu chaque dépendance pour éviter les failles de la chaîne d'approvisionnement.</p>
+                        </div>
+                        <div class="step-connector"></div>
+                    </div>
+                    <div class="workflow-step" data-step="03">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="ph-fill ph-activity"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Monitoring 24/7</h3>
+                            <p>UptimeRobot et Fail2Ban garantissent un uptime maximal et une surveillance continue des menaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="ph ph-paper-plane-tilt"></i> Contact</span>
+                <h2 class="section-title">Prêt à <span class="gradient-text">collaborer</span> ?</h2>
+                <p class="section-desc">Que vous ayez besoin d'un SaaS sécurisé, d'une plateforme e-commerce ou d'un audit DevSecOps, discutons de votre projet.</p>
+            </div>
+            <div class="cta-grid">
+                <a href="https://github.com/ayenamichel7-art" class="cta-card" id="cta-github" target="_blank" rel="noopener noreferrer">
+                    <div class="cta-icon">
+                        <i class="ph-fill ph-github-logo"></i>
+                    </div>
+                    <h3>Explorer mon GitHub</h3>
+                    <p>Pour la preuve technique</p>
+                    <span class="cta-arrow">
+                        <i class="ph ph-arrow-right"></i>
+                    </span>
+                </a>
+                <a href="https://wa.me/2290152944148" class="cta-card cta-card-primary" id="cta-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <div class="cta-icon">
+                        <i class="ph-fill ph-whatsapp-logo"></i>
+                    </div>
+                    <h3>Discutons sur WhatsApp</h3>
+                    <p>Pour le business</p>
+                    <span class="cta-arrow">
+                        <i class="ph ph-arrow-right"></i>
+                    </span>
+                </a>
+                <a href="Michel_AYENA_CV_DevSecOps.pdf" class="cta-card" id="cta-cv-download" download>
+                    <div class="cta-icon">
+                        <i class="ph-fill ph-file-pdf"></i>
+                    </div>
+                    <h3>Télécharger mon CV</h3>
+                    <p>Format DevSecOps</p>
+                    <span class="cta-arrow">
+                        <i class="ph ph-download-simple"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-bracket">&lt;</span>Michel AYENA<span class="logo-bracket">/&gt;</span>
+                <p>Fullstack Developer & DevSecOps Enthusiast</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/ayenamichel7-art" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="ph ph-github-logo"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/michel-ayena-36a970365" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="ph ph-linkedin-logo"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61587998576521" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="ph ph-facebook-logo"></i>
+                </a>
+                <a href="mailto:Ayenamichel7@gmail.com" aria-label="Email">
+                    <i class="ph ph-envelope-simple"></i>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Michel AYENA — Construit avec passion & sécurité.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV — Michel AYENA — Fullstack Developer & DevSecOps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* --- Print-optimized CV --- */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
+            font-size: 9.5pt;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .cv-page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 68mm 1fr;
+        }
+
+        /* --- Sidebar --- */
+        .sidebar {
+            background: #0f0f1a;
+            color: #e0e0f0;
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .avatar-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 28px;
+            font-weight: 900;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .sidebar-name {
+            font-size: 14pt;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+        }
+
+        .sidebar-title {
+            font-size: 7.5pt;
+            color: #818cf8;
+            font-weight: 600;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-section-title {
+            font-size: 7pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6366f1;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #6366f1;
+            margin-bottom: 2px;
+        }
+
+        /* Contact Items */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 7.5pt;
+            color: #c0c0d8;
+            word-break: break-all;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border-radius: 4px;
+            background: rgba(99, 102, 241, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            color: #818cf8;
+        }
+
+        .contact-item a {
+            color: #c0c0d8;
+            text-decoration: none;
+        }
+
+        /* Skills sidebar */
+        .skill-group {
+            margin-bottom: 6px;
+        }
+
+        .skill-group-label {
+            font-size: 7.5pt;
+            font-weight: 700;
+            color: #e0e0f0;
+            margin-bottom: 4px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+
+        .skill-tag {
+            padding: 2px 7px;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 3px;
+            font-size: 6.5pt;
+            color: #a5b4fc;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+
+        .skill-tag-green {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: rgba(16, 185, 129, 0.25);
+            color: #6ee7b7;
+        }
+
+        /* Languages */
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 7.5pt;
+        }
+
+        .lang-dots {
+            display: flex;
+            gap: 3px;
+        }
+
+        .lang-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .lang-dot.active {
+            background: #6366f1;
+        }
+
+        /* Certif/Tools */
+        .tool-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .tool-item {
+            font-size: 7pt;
+            color: #a0a0b8;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .tool-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+        }
+
+        /* --- Main Content --- */
+        .main {
+            padding: 14px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Header */
+        .main-header {
+            padding-bottom: 14px;
+            border-bottom: 2px solid #6366f1;
+        }
+
+        .main-name {
+            font-size: 22pt;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            color: #0f0f1a;
+            line-height: 1.1;
+        }
+
+        .main-name span {
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .main-headline {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #4b5563;
+            margin-top: 4px;
+        }
+
+        .main-tagline {
+            font-size: 8.5pt;
+            color: #6b7280;
+            margin-top: 6px;
+            line-height: 1.6;
+            font-style: italic;
+            border-left: 3px solid #6366f1;
+            padding-left: 10px;
+        }
+
+        .main-tagline strong {
+            color: #10b981;
+            font-style: normal;
+        }
+
+        /* Sections */
+        .cv-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .cv-section-title {
+            font-size: 9pt;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #6366f1;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .cv-section-title::before {
+            content: '';
+            width: 4px;
+            height: 14px;
+            background: linear-gradient(135deg, #6366f1, #06b6d4);
+            border-radius: 2px;
+        }
+
+        /* Project Cards */
+        .project-entry {
+            padding: 8px 12px;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            border-left: 3px solid #6366f1;
+        }
+
+        .project-entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .project-entry-title {
+            font-size: 9.5pt;
+            font-weight: 800;
+            color: #0f0f1a;
+        }
+
+        .project-entry-type {
+            font-size: 7pt;
+            font-weight: 600;
+            color: #6366f1;
+            background: rgba(99, 102, 241, 0.08);
+            padding: 1px 8px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-entry-desc {
+            font-size: 8pt;
+            color: #6b7280;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .project-entry-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .project-entry-bullets li {
+            font-size: 8pt;
+            color: #374151;
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .project-entry-bullets li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: 700;
+        }
+
+        .project-entry-bullets li strong {
+            color: #0f0f1a;
+            font-weight: 700;
+        }
+
+        .project-entry-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-top: 6px;
+        }
+
+        .project-stack-tag {
+            padding: 1px 6px;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 3px;
+            font-size: 6.5pt;
+            color: #3b82f6;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+
+        /* Green security variant */
+        .project-entry.security-focus {
+            border-left-color: #10b981;
+        }
+
+        /* Philosophy section */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .philosophy-step {
+            padding: 10px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .philosophy-step-number {
+            font-size: 16pt;
+            font-weight: 900;
+            color: #10b981;
+            line-height: 1;
+        }
+
+        .philosophy-step h4 {
+            font-size: 7.5pt;
+            font-weight: 700;
+            color: #0f0f1a;
+            margin: 4px 0 2px;
+        }
+
+        .philosophy-step p {
+            font-size: 6.5pt;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+
+        /* Print Media */
+        @media print {
+            body {
+                background: white;
+            }
+            .cv-page {
+                width: 100%;
+                min-height: 100vh;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        /* Screen preview */
+        @media screen {
+            body {
+                background: #e5e7eb;
+                padding: 20px 0;
+            }
+            .cv-page {
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-page">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="avatar-circle">MA</div>
+                <div class="sidebar-name">Michel AYENA</div>
+                <div class="sidebar-title">Fullstack Developer<br>& DevSecOps</div>
+            </div>
+
+            <!-- Contact -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Contact</div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉</div>
+                    <a href="mailto:Ayenamichel7@gmail.com">Ayenamichel7@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <span>+229 01 46 90 63 52</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon" style="color: #25D366;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 256 256"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,1.5l-19.24,16a5.36,5.36,0,0,1-7.16-.52,111.79,111.79,0,0,1-37.38-37.38,5.36,5.36,0,0,1-.52-7.16l16-19.24a8,8,0,0,0,1.5-8l-16-32a8,8,0,0,0-9.75-4.22h0c-8,2.44-24.3,10.6-26.68,34.05a96,96,0,0,0,123,123c23.45-2.38,31.61-18.66,34.05-26.68A8,8,0,0,0,187.58,144.84Z"></path><path d="M232,128A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.5a8,8,0,0,1-1,7L39.69,212.31,76.5,200.05a8,8,0,0,1,7-1A88,88,0,0,0,216,128Z"></path></svg>
+                    </div>
+                    <a href="https://wa.me/2290152944148">+229 01 52 94 41 48</a>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🐙</div>
+                    <a href="https://github.com/ayenamichel7-art">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <span>Bénin</span>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Compétences</div>
+                
+                <div class="skill-group">
+                    <div class="skill-group-label">Frontend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React 19</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">Backend</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Laravel 11/12</span>
+                        <span class="skill-tag">PHP 8.3</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">API REST</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">DevSecOps & Cloud</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-green">GitHub Actions</span>
+                        <span class="skill-tag skill-tag-green">Docker</span>
+                        <span class="skill-tag skill-tag-green">SAST (Semgrep)</span>
+                        <span class="skill-tag skill-tag-green">SCA (Snyk)</span>
+                        <span class="skill-tag skill-tag-green">Cloudflare</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">Monitoring</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UptimeRobot</span>
+                        <span class="skill-tag">Fail2Ban</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-label">Vibe Coding</div>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-green">Antigravity (IA)</span>
+                        <span class="skill-tag">AI-Assisted Dev</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Langues</div>
+                <div class="lang-item">
+                    <span>Français</span>
+                    <div class="lang-dots">
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot active"></span>
+                    </div>
+                </div>
+                <div class="lang-item">
+                    <span>Anglais</span>
+                    <div class="lang-dots">
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot active"></span>
+                        <span class="lang-dot"></span>
+                        <span class="lang-dot"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="sidebar-section">
+                <div class="sidebar-section-title">Outils</div>
+                <div class="tool-list">
+                    <div class="tool-item">VS Code</div>
+                    <div class="tool-item">Antigravity (IA)</div>
+                    <div class="tool-item">Git / GitHub</div>
+                    <div class="tool-item">Postman</div>
+                    <div class="tool-item">Linux Terminal</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <!-- Header -->
+            <header class="main-header">
+                <h1 class="main-name">Michel <span>AYENA</span></h1>
+                <p class="main-headline">Fullstack Developer & DevSecOps Enthusiast</p>
+                <p class="main-tagline">
+                    Je ne me contente pas de coder des fonctionnalités. Je bâtis des écosystèmes SaaS 
+                    <strong>sécurisés (SAST/SCA)</strong>, performants, 100% Dockerisés et prêts pour la production. Le Vibe Coding me donne la vitesse, la rigueur me donne la fiabilité.
+                </p>
+            </header>
+
+            <!-- Expériences & Projets -->
+            <section class="cv-section">
+                <h2 class="cv-section-title">Expériences & Projets Phares</h2>
+
+                <div class="project-entry security-focus">
+                    <div class="project-entry-header">
+                        <span class="project-entry-title">O-229 Education</span>
+                        <span class="project-entry-type">SaaS Multi-tenant</span>
+                    </div>
+                    <div class="project-entry-desc">Plateforme de dématérialisation scolaire — Architecture industrielle</div>
+                    <ul class="project-entry-bullets">
+                        <li><strong>Innovation :</strong> Architecture Multi-tenant avec isolation stricte des données pour garantir la confidentialité entre établissements.</li>
+                        <li><strong>Sécurité :</strong> Audit systématique SCA des dépendances pour protéger les données académiques sensibles.</li>
+                        <li><strong>Impact :</strong> Gestion complète du cycle scolaire — inscriptions, notes, bulletins, paiements.</li>
+                    </ul>
+                    <div class="project-entry-stack">
+                        <span class="project-stack-tag">Laravel</span>
+                        <span class="project-stack-tag">Next.js</span>
+                        <span class="project-stack-tag">PostgreSQL (Schémas isolés)</span>
+                        <span class="project-stack-tag">Multi-tenancy</span>
+                        <span class="project-stack-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-entry">
+                    <div class="project-entry-header">
+                        <span class="project-entry-title">OpenZap</span>
+                        <span class="project-entry-type">Infrastructure Communication</span>
+                    </div>
+                    <div class="project-entry-desc">Solution SaaS d'orchestration de campagnes WhatsApp à grande échelle</div>
+                    <ul class="project-entry-bullets">
+                        <li><strong>Performance :</strong> Gestion de flux asynchrones via Redis & Laravel Jobs pour traiter des volumes massifs sans latence.</li>
+                        <li><strong>Sécurité :</strong> Algorithmes de protection anti-bannissement et sécurisation des points d'accès API (SSRF hardening).</li>
+                    </ul>
+                    <div class="project-entry-stack">
+                        <span class="project-stack-tag">Laravel</span>
+                        <span class="project-stack-tag">Redis</span>
+                        <span class="project-stack-tag">API WhatsApp</span>
+                        <span class="project-stack-tag">Jobs Queue</span>
+                        <span class="project-stack-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-entry">
+                    <div class="project-entry-header">
+                        <span class="project-entry-title">ProDesign</span>
+                        <span class="project-entry-type">Automatisation IA</span>
+                    </div>
+                    <div class="project-entry-desc">Plateforme haute performance pour agences créatives</div>
+                    <ul class="project-entry-bullets">
+                        <li><strong>Technique :</strong> Hybridation Rust + IA (Python) + interface React pour un rendu ultra-rapide et fiable.</li>
+                        <li><strong>DevOps :</strong> Environnement entièrement conteneurisé avec Docker, non-root execution, Dependabot activé.</li>
+                    </ul>
+                    <div class="project-entry-stack">
+                        <span class="project-stack-tag">Rust</span>
+                        <span class="project-stack-tag">Python / IA</span>
+                        <span class="project-stack-tag">React</span>
+                        <span class="project-stack-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-entry">
+                    <div class="project-entry-header">
+                        <span class="project-entry-title">O-229 Marketplace</span>
+                        <span class="project-entry-type">E-commerce</span>
+                    </div>
+                    <div class="project-entry-desc">Solution robuste de commerce électronique connectée à WhatsApp</div>
+                    <ul class="project-entry-bullets">
+                        <li><strong>Impact :</strong> Intégration profonde WhatsApp pour transformer l'expérience d'achat au Bénin.</li>
+                        <li><strong>DevOps :</strong> Pipeline CI/CD automatisé vers Vercel avec scan de vulnérabilités intégré.</li>
+                    </ul>
+                    <div class="project-entry-stack">
+                        <span class="project-stack-tag">React</span>
+                        <span class="project-stack-tag">Tailwind</span>
+                        <span class="project-stack-tag">GitHub Actions</span>
+                        <span class="project-stack-tag">Vercel</span>
+                    </div>
+                </div>
+
+                <div class="project-entry">
+                    <div class="project-entry-header">
+                        <span class="project-entry-title">DigiFix</span>
+                        <span class="project-entry-type">Services Digitaux</span>
+                    </div>
+                    <div class="project-entry-desc">Application conteneurisée pour la gestion de services</div>
+                    <ul class="project-entry-bullets">
+                        <li><strong>Architecture :</strong> Stack moderne Laravel (Backend) & React/Vite (Frontend) avec parité dev/prod parfaite.</li>
+                        <li><strong>Infrastructure :</strong> Entièrement conteneurisé avec Docker — déploiement reproductible et sécurisé.</li>
+                    </ul>
+                    <div class="project-entry-stack">
+                        <span class="project-stack-tag">Laravel</span>
+                        <span class="project-stack-tag">React / Vite</span>
+                        <span class="project-stack-tag">Docker</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Philosophie -->
+            <section class="cv-section">
+                <h2 class="cv-section-title">Ma Philosophie — L'Excellence par la Rigueur</h2>
+                <div class="philosophy-grid">
+                    <div class="philosophy-step">
+                        <div class="philosophy-step-number">01</div>
+                        <h4>SAST</h4>
+                        <p>Analyse statique Semgrep sur chaque commit</p>
+                    </div>
+                    <div class="philosophy-step">
+                        <div class="philosophy-step-number">02</div>
+                        <h4>SCA</h4>
+                        <p>Audit Snyk & Dependabot en continu</p>
+                    </div>
+                    <div class="philosophy-step">
+                        <div class="philosophy-step-number">03</div>
+                        <h4>Monitoring</h4>
+                        <p>UptimeRobot & Fail2Ban — 24/7</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
