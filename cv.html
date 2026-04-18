@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -427,6 +427,9 @@
                 margin: 0;
                 box-shadow: none;
             }
+            .cv-lang-switcher {
+                display: none !important;
+            }
         }
 
         /* Screen preview */
@@ -442,18 +445,25 @@
     </style>
 </head>
 <body>
+    <!-- Language Switcher for CV -->
+    <div class="lang-switcher cv-lang-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 1000; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #ddd;">
+        <button class="lang-btn active" data-lang-switcher="fr" style="color: #333; padding: 5px 10px;">FR</button>
+        <span class="lang-divider" style="color: #ddd;">|</span>
+        <button class="lang-btn" data-lang-switcher="en" style="color: #333; padding: 5px 10px;">EN</button>
+    </div>
+
     <div class="cv-page">
         <!-- SIDEBAR -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="avatar-circle">MA</div>
                 <div class="sidebar-name">Michel AYENA</div>
-                <div class="sidebar-title">Fullstack Developer<br>& DevSecOps</div>
+                <div class="sidebar-title" data-i18n="cv_sidebar_subtitle">Fullstack Developer<br>& DevSecOps</div>
             </div>
 
             <!-- Contact -->
             <div class="sidebar-section">
-                <div class="sidebar-section-title">Contact</div>
+                <div class="sidebar-section-title" data-i18n="cv_contact_title">Contact</div>
                 <div class="contact-item">
                     <div class="contact-icon">✉</div>
                     <a href="mailto:Ayenamichel7@gmail.com">Ayenamichel7@gmail.com</a>
@@ -481,7 +491,7 @@
 
             <!-- Technical Skills -->
             <div class="sidebar-section">
-                <div class="sidebar-section-title">Compétences</div>
+                <div class="sidebar-section-title" data-i18n="cv_skills_title">Compétences</div>
                 
                 <div class="skill-group">
                     <div class="skill-group-label">Frontend</div>
@@ -526,7 +536,7 @@
                 </div>
 
                 <div class="skill-group">
-                    <div class="skill-group-label">Vibe Coding</div>
+                    <div class="skill-group-label" data-i18n="cv_skill_vibe">Vibe Coding</div>
                     <div class="skill-tags">
                         <span class="skill-tag skill-tag-green">Antigravity (IA)</span>
                         <span class="skill-tag">AI-Assisted Dev</span>
@@ -536,9 +546,9 @@
 
             <!-- Languages -->
             <div class="sidebar-section">
-                <div class="sidebar-section-title">Langues</div>
+                <div class="sidebar-section-title" data-i18n="cv_languages_title">Langues</div>
                 <div class="lang-item">
-                    <span>Français</span>
+                    <span data-i18n="lang_french">Français</span>
                     <div class="lang-dots">
                         <span class="lang-dot active"></span>
                         <span class="lang-dot active"></span>
@@ -548,7 +558,7 @@
                     </div>
                 </div>
                 <div class="lang-item">
-                    <span>Anglais</span>
+                    <span data-i18n="lang_english">Anglais</span>
                     <div class="lang-dots">
                         <span class="lang-dot active"></span>
                         <span class="lang-dot active"></span>
@@ -561,7 +571,7 @@
 
             <!-- Tools -->
             <div class="sidebar-section">
-                <div class="sidebar-section-title">Outils</div>
+                <div class="sidebar-section-title" data-i18n="cv_tools_title">Outils</div>
                 <div class="tool-list">
                     <div class="tool-item">VS Code</div>
                     <div class="tool-item">Antigravity (IA)</div>
@@ -577,8 +587,8 @@
             <!-- Header -->
             <header class="main-header">
                 <h1 class="main-name">Michel <span>AYENA</span></h1>
-                <p class="main-headline">Fullstack Developer & DevSecOps Enthusiast</p>
-                <p class="main-tagline">
+                <p class="main-headline" data-i18n="cv_main_subtitle">Fullstack Developer & DevSecOps Enthusiast</p>
+                <p class="main-tagline" data-i18n="cv_tagline">
                     Je ne me contente pas de coder des fonctionnalités. Je bâtis des écosystèmes SaaS 
                     <strong>sécurisés (SAST/SCA)</strong>, performants, 100% Dockerisés et prêts pour la production. Le Vibe Coding me donne la vitesse, la rigueur me donne la fiabilité.
                 </p>
@@ -586,18 +596,18 @@
 
             <!-- Expériences & Projets -->
             <section class="cv-section">
-                <h2 class="cv-section-title">Expériences & Projets Phares</h2>
+                <h2 class="cv-section-title" data-i18n="cv_exp_title">Expériences & Projets Phares</h2>
 
                 <div class="project-entry security-focus">
                     <div class="project-entry-header">
                         <span class="project-entry-title">O-229 Education</span>
                         <span class="project-entry-type">SaaS Multi-tenant</span>
                     </div>
-                    <div class="project-entry-desc">Plateforme de dématérialisation scolaire — Architecture industrielle</div>
+                    <div class="project-entry-desc" data-i18n="cv_project_education_desc">Plateforme de dématérialisation scolaire — Architecture industrielle</div>
                     <ul class="project-entry-bullets">
-                        <li><strong>Innovation :</strong> Architecture Multi-tenant avec isolation stricte des données pour garantir la confidentialité entre établissements.</li>
-                        <li><strong>Sécurité :</strong> Audit systématique SCA des dépendances pour protéger les données académiques sensibles.</li>
-                        <li><strong>Impact :</strong> Gestion complète du cycle scolaire — inscriptions, notes, bulletins, paiements.</li>
+                        <li data-i18n="cv_project_education_b1"><strong>Innovation :</strong> Architecture Multi-tenant avec isolation stricte des données pour garantir la confidentialité entre établissements.</li>
+                        <li data-i18n="cv_project_education_b2"><strong>Sécurité :</strong> Audit systématique SCA des dépendances pour protéger les données académiques sensibles.</li>
+                        <li data-i18n="cv_project_education_b3"><strong>Impact :</strong> Gestion complète du cycle scolaire — inscriptions, notes, bulletins, paiements.</li>
                     </ul>
                     <div class="project-entry-stack">
                         <span class="project-stack-tag">Laravel</span>
@@ -613,10 +623,10 @@
                         <span class="project-entry-title">OpenZap</span>
                         <span class="project-entry-type">Infrastructure Communication</span>
                     </div>
-                    <div class="project-entry-desc">Solution SaaS d'orchestration de campagnes WhatsApp à grande échelle</div>
+                    <div class="project-entry-desc" data-i18n="cv_project_openzap_desc">Solution SaaS d'orchestration de campagnes WhatsApp à grande échelle</div>
                     <ul class="project-entry-bullets">
-                        <li><strong>Performance :</strong> Gestion de flux asynchrones via Redis & Laravel Jobs pour traiter des volumes massifs sans latence.</li>
-                        <li><strong>Sécurité :</strong> Algorithmes de protection anti-bannissement et sécurisation des points d'accès API (SSRF hardening).</li>
+                        <li data-i18n="cv_project_openzap_b1"><strong>Performance :</strong> Gestion de flux asynchrones via Redis & Laravel Jobs pour traiter des volumes massifs sans latence.</li>
+                        <li data-i18n="cv_project_openzap_b2"><strong>Sécurité :</strong> Algorithmes de protection anti-bannissement et sécurisation des points d'accès API (SSRF hardening).</li>
                     </ul>
                     <div class="project-entry-stack">
                         <span class="project-stack-tag">Laravel</span>
@@ -632,10 +642,10 @@
                         <span class="project-entry-title">ProDesign</span>
                         <span class="project-entry-type">Automatisation IA</span>
                     </div>
-                    <div class="project-entry-desc">Plateforme haute performance pour agences créatives</div>
+                    <div class="project-entry-desc" data-i18n="cv_project_prodesign_desc">Plateforme haute performance pour agences créatives</div>
                     <ul class="project-entry-bullets">
-                        <li><strong>Technique :</strong> Hybridation Rust + IA (Python) + interface React pour un rendu ultra-rapide et fiable.</li>
-                        <li><strong>DevOps :</strong> Environnement entièrement conteneurisé avec Docker, non-root execution, Dependabot activé.</li>
+                        <li data-i18n="cv_project_prodesign_b1"><strong>Technique :</strong> Hybridation Rust + IA (Python) + interface React pour un rendu ultra-rapide et fiable.</li>
+                        <li data-i18n="cv_project_prodesign_b2"><strong>DevOps :</strong> Environnement entièrement conteneurisé avec Docker, non-root execution, Dependabot activé.</li>
                     </ul>
                     <div class="project-entry-stack">
                         <span class="project-stack-tag">Rust</span>
@@ -650,10 +660,10 @@
                         <span class="project-entry-title">O-229 Marketplace</span>
                         <span class="project-entry-type">E-commerce</span>
                     </div>
-                    <div class="project-entry-desc">Solution robuste de commerce électronique connectée à WhatsApp</div>
+                    <div class="project-entry-desc" data-i18n="cv_project_marketplace_desc">Solution robuste de commerce électronique connectée à WhatsApp</div>
                     <ul class="project-entry-bullets">
-                        <li><strong>Impact :</strong> Intégration profonde WhatsApp pour transformer l'expérience d'achat au Bénin.</li>
-                        <li><strong>DevOps :</strong> Pipeline CI/CD automatisé vers Vercel avec scan de vulnérabilités intégré.</li>
+                        <li data-i18n="cv_project_marketplace_b1"><strong>Impact :</strong> Intégration profonde WhatsApp pour transformer l'expérience d'achat au Bénin.</li>
+                        <li data-i18n="cv_project_marketplace_b2"><strong>DevOps :</strong> Pipeline CI/CD automatisé vers Vercel avec scan de vulnérabilités intégré.</li>
                     </ul>
                     <div class="project-entry-stack">
                         <span class="project-stack-tag">React</span>
@@ -668,10 +678,10 @@
                         <span class="project-entry-title">DigiFix</span>
                         <span class="project-entry-type">Services Digitaux</span>
                     </div>
-                    <div class="project-entry-desc">Application conteneurisée pour la gestion de services</div>
+                    <div class="project-entry-desc" data-i18n="cv_project_digifix_desc">Application conteneurisée pour la gestion de services</div>
                     <ul class="project-entry-bullets">
-                        <li><strong>Architecture :</strong> Stack moderne Laravel (Backend) & React/Vite (Frontend) avec parité dev/prod parfaite.</li>
-                        <li><strong>Infrastructure :</strong> Entièrement conteneurisé avec Docker — déploiement reproductible et sécurisé.</li>
+                        <li data-i18n="cv_project_digifix_b1"><strong>Architecture :</strong> Stack moderne Laravel (Backend) & React/Vite (Frontend) avec parité dev/prod parfaite.</li>
+                        <li data-i18n="cv_project_digifix_b2"><strong>Infrastructure :</strong> Entièrement conteneurisé avec Docker — déploiement reproductible et sécurisé.</li>
                     </ul>
                     <div class="project-entry-stack">
                         <span class="project-stack-tag">Laravel</span>
@@ -683,26 +693,27 @@
 
             <!-- Philosophie -->
             <section class="cv-section">
-                <h2 class="cv-section-title">Ma Philosophie — L'Excellence par la Rigueur</h2>
+                <h2 class="cv-section-title" data-i18n="cv_philosophy_title">Ma Philosophie — L'Excellence par la Rigueur</h2>
                 <div class="philosophy-grid">
                     <div class="philosophy-step">
                         <div class="philosophy-step-number">01</div>
                         <h4>SAST</h4>
-                        <p>Analyse statique Semgrep sur chaque commit</p>
+                        <p data-i18n="cv_sast_desc">Analyse statique Semgrep sur chaque commit</p>
                     </div>
                     <div class="philosophy-step">
                         <div class="philosophy-step-number">02</div>
                         <h4>SCA</h4>
-                        <p>Audit Snyk & Dependabot en continu</p>
+                        <p data-i18n="cv_sca_desc">Audit Snyk & Dependabot en continu</p>
                     </div>
                     <div class="philosophy-step">
                         <div class="philosophy-step-number">03</div>
                         <h4>Monitoring</h4>
-                        <p>UptimeRobot & Fail2Ban — 24/7</p>
+                        <p data-i18n="cv_monitoring_desc">UptimeRobot & Fail2Ban — 24/7</p>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

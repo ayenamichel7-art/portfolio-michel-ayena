@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,13 +41,20 @@
             <a href="#hero" class="nav-logo">
                 <span class="logo-bracket">&lt;</span>MA<span class="logo-bracket">/&gt;</span>
             </a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#about" class="nav-link">À propos</a></li>
-                <li><a href="#skills" class="nav-link">Compétences</a></li>
-                <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#philosophy" class="nav-link">Philosophie</a></li>
-                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
-            </ul>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang-switcher="fr">FR</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang-switcher="en">EN</button>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about" class="nav-link" data-i18n="nav_about">À propos</a></li>
+                    <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Compétences</a></li>
+                    <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projets</a></li>
+                    <li><a href="#philosophy" class="nav-link" data-i18n="nav_philosophy">Philosophie</a></li>
+                    <li><a href="#contact" class="nav-link nav-link-cta" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+            </div>
             <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
@@ -61,7 +68,7 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="ph ph-shield-check"></i>
-                <span>Disponible pour de nouveaux projets</span>
+                <span data-i18n="hero_badge">Disponible pour de nouveaux projets</span>
             </div>
             <h1 class="hero-name">
                 <span class="hero-first">Michel</span>
@@ -72,10 +79,10 @@
                 <span class="title-separator">&</span>
                 <span class="title-accent">DevSecOps Enthusiast</span>
             </p>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
                 Expertise <strong>Laravel</strong>, <strong>Next.js</strong> & <strong>Automatisation de Sécurité</strong> · <strong>Vibe Coder</strong> 🎵
             </p>
-            <blockquote class="hero-quote">
+            <blockquote class="hero-quote" data-i18n="hero_quote">
                 <i class="ph ph-quotes"></i>
                 Je ne me contente pas de coder des fonctionnalités. Je bâtis des écosystèmes SaaS 
                 <strong>sécurisés (SAST/SCA)</strong>, performants et prêts pour la production.
@@ -83,25 +90,25 @@
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary" id="cta-projects">
                     <i class="ph ph-rocket-launch"></i>
-                    <span>Explorer mes projets</span>
+                    <span data-i18n="hero_cta_projects">Explorer mes projets</span>
                 </a>
                 <a href="#contact" class="btn btn-outline" id="cta-contact">
                     <i class="ph ph-chat-circle-dots"></i>
-                    <span>Discutons</span>
+                    <span data-i18n="hero_cta_contact">Discutons</span>
                 </a>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Projets SaaS</span>
+                    <span class="stat-label" data-i18n="stat_saas">Projets SaaS</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
-                    <span class="stat-label">CI/CD Automatisé</span>
+                    <span class="stat-label" data-i18n="stat_cicd">CI/CD Automatisé</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
-                    <span class="stat-label">Monitoring Actif</span>
+                    <span class="stat-label" data-i18n="stat_monitoring">Monitoring Actif</span>
                 </div>
             </div>
         </div>
@@ -129,37 +136,37 @@
     <section id="about" class="section about-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><i class="ph ph-user-circle"></i> À propos</span>
-                <h2 class="section-title">Un développeur qui <span class="gradient-text">sécurise</span> ce qu'il construit</h2>
+                <span class="section-tag"><i class="ph ph-user-circle"></i> <span data-i18n="about_tag">À propos</span></span>
+                <h2 class="section-title" data-i18n="about_title">Un développeur qui <span class="gradient-text">sécurise</span> ce qu'il construit</h2>
             </div>
             <div class="about-grid">
                 <div class="about-card about-card-main">
                     <div class="about-icon">
                         <i class="ph-fill ph-code"></i>
                     </div>
-                    <h3>Ingénieur Fullstack</h3>
-                    <p>Spécialisé dans la construction d'applications SaaS complètes avec <strong>Laravel</strong> et <strong>Next.js</strong>. De l'architecture de la base de données à l'interface utilisateur, je maîtrise l'ensemble de la chaîne. Tous mes projets sont <strong>100% Dockerisés</strong>.</p>
+                    <h3 data-i18n="about_fullstack_title">Ingénieur Fullstack</h3>
+                    <p data-i18n="about_fullstack_desc">Spécialisé dans la construction d'applications SaaS complètes avec <strong>Laravel</strong> et <strong>Next.js</strong>. De l'architecture de la base de données à l'interface utilisateur, je maîtrise l'ensemble de la chaîne. Tous mes projets sont <strong>100% Dockerisés</strong>.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
                         <i class="ph-fill ph-shield-checkered"></i>
                     </div>
-                    <h3>DevSecOps</h3>
-                    <p>Chaque projet que je livre passe par des audits <strong>SAST/SCA</strong> automatisés. La sécurité n'est pas une option, c'est la fondation.</p>
+                    <h3 data-i18n="about_devsecops_title">DevSecOps</h3>
+                    <p data-i18n="about_devsecops_desc">Chaque projet que je livre passe par des audits <strong>SAST/SCA</strong> automatisés. La sécurité n'est pas une option, c'est la fondation.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
                         <i class="ph-fill ph-music-notes"></i>
                     </div>
-                    <h3>Vibe Coder</h3>
-                    <p>J'embrasse le <strong>Vibe Coding</strong> : je combine intuition créative et outils IA comme <strong>Antigravity</strong> pour transformer des idées en produits à une vitesse industrielle.</p>
+                    <h3 data-i18n="about_vibe_title">Vibe Coder</h3>
+                    <p data-i18n="about_vibe_desc">J'embrasse le <strong>Vibe Coding</strong> : je combine intuition créative et outils IA comme <strong>Antigravity</strong> pour transformer des idées en produits à une vitesse industrielle.</p>
                 </div>
                 <div class="about-card">
                     <div class="about-icon">
                         <i class="ph-fill ph-globe-hemisphere-west"></i>
                     </div>
-                    <h3>Impact Local</h3>
-                    <p>Je conçois des solutions technologiques qui répondent aux défis concrets du Bénin et de l'Afrique de l'Ouest.</p>
+                    <h3 data-i18n="about_impact_title">Impact Local</h3>
+                    <p data-i18n="about_impact_desc">Je conçois des solutions technologiques qui répondent aux défis concrets du Bénin et de l'Afrique de l'Ouest.</p>
                 </div>
             </div>
         </div>
@@ -169,8 +176,8 @@
     <section id="skills" class="section skills-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><i class="ph ph-stack"></i> Compétences</span>
-                <h2 class="section-title">Stack technique <span class="gradient-text">organisé par piliers</span></h2>
+                <span class="section-tag"><i class="ph ph-stack"></i> <span data-i18n="skills_tag">Compétences</span></span>
+                <h2 class="section-title" data-i18n="skills_title">Stack technique <span class="gradient-text">organisé par piliers</span></h2>
             </div>
             <div class="skills-grid">
                 <!-- Frontend Pillar -->
@@ -179,8 +186,8 @@
                         <div class="pillar-icon">
                             <i class="ph-fill ph-browser"></i>
                         </div>
-                        <h3>Frontend</h3>
-                        <span class="pillar-tag">Interface & UX</span>
+                        <h3 data-i18n="skills_frontend">Frontend</h3>
+                        <span class="pillar-tag" data-i18n="skills_frontend_tag">Interface & UX</span>
                     </div>
                     <div class="pillar-techs">
                         <div class="tech-chip">
@@ -211,8 +218,8 @@
                         <div class="pillar-icon">
                             <i class="ph-fill ph-database"></i>
                         </div>
-                        <h3>Backend</h3>
-                        <span class="pillar-tag">Architecture & API</span>
+                        <h3 data-i18n="skills_backend">Backend</h3>
+                        <span class="pillar-tag" data-i18n="skills_backend_tag">Architecture & API</span>
                     </div>
                     <div class="pillar-techs">
                         <div class="tech-chip">
@@ -258,8 +265,8 @@
                         <div class="pillar-icon">
                             <i class="ph-fill ph-shield-check"></i>
                         </div>
-                        <h3>DevSecOps & Cloud</h3>
-                        <span class="pillar-tag">Sécurité & Déploiement</span>
+                        <h3 data-i18n="skills_devsecops">DevSecOps & Cloud</h3>
+                        <span class="pillar-tag" data-i18n="skills_devsecops_tag">Sécurité & Déploiement</span>
                     </div>
                     <div class="pillar-techs">
                         <div class="tech-chip">
@@ -294,8 +301,8 @@
                         <div class="pillar-icon">
                             <i class="ph-fill ph-activity"></i>
                         </div>
-                        <h3>Monitoring</h3>
-                        <span class="pillar-tag">Surveillance & Fiabilité</span>
+                        <h3 data-i18n="skills_monitoring">Monitoring</h3>
+                        <span class="pillar-tag" data-i18n="skills_monitoring_tag">Surveillance & Fiabilité</span>
                     </div>
                     <div class="pillar-techs">
                         <div class="tech-chip">
@@ -319,16 +326,16 @@
     <section id="projects" class="section projects-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><i class="ph ph-folders"></i> Projets Phares</span>
-                <h2 class="section-title">Des systèmes <span class="gradient-text">industriels</span>, pas des prototypes</h2>
-                <p class="section-desc">Chaque projet est architecturé pour la production, sécurisé par design et automatisé de bout en bout.</p>
+                <span class="section-tag"><i class="ph ph-folders"></i> <span data-i18n="projects_tag">Projets Phares</span></span>
+                <h2 class="section-title" data-i18n="projects_title">Des systèmes <span class="gradient-text">industriels</span>, pas des prototypes</h2>
+                <p class="section-desc" data-i18n="projects_desc">Chaque projet est architecturé pour la production, sécurisé par design et automatisé de bout en bout.</p>
             </div>
 
             <div class="projects-grid">
                 <!-- O-229 Education -->
                 <article class="project-card project-card-featured" id="project-education">
                     <div class="project-badge">
-                        <i class="ph ph-crown"></i> Projet Phare
+                        <i class="ph ph-crown"></i> <span data-i18n="project_featured">Projet Phare</span>
                     </div>
                     <div class="project-header">
                         <div class="project-icon">
@@ -336,23 +343,23 @@
                         </div>
                         <div class="project-meta">
                             <h3>O-229 Education</h3>
-                            <span class="project-type">SaaS Multi-tenant</span>
+                            <span class="project-type" data-i18n="project_education_type">SaaS Multi-tenant</span>
                         </div>
                     </div>
-                    <p class="project-desc">Plateforme de dématérialisation scolaire avec architecture industrielle pour la gestion complète des établissements.</p>
+                    <p class="project-desc" data-i18n="project_education_desc">Plateforme de dématérialisation scolaire avec architecture industrielle pour la gestion complète des établissements.</p>
                     <div class="project-highlights">
                         <div class="highlight">
                             <i class="ph ph-lightning"></i>
                             <div>
-                                <strong>Innovation</strong>
-                                <span>Architecture Multi-tenant avec isolation stricte des données pour la confidentialité inter-établissements.</span>
+                                <strong data-i18n="project_highlight_innovation">Innovation</strong>
+                                <span data-i18n="project_education_innovation">Architecture Multi-tenant avec isolation stricte des données pour la confidentialité inter-établissements.</span>
                             </div>
                         </div>
                         <div class="highlight highlight-security">
                             <i class="ph ph-shield-check"></i>
                             <div>
-                                <strong>Sécurité</strong>
-                                <span>Audit systématique SCA des dépendances pour protéger les données académiques sensibles.</span>
+                                <strong data-i18n="project_highlight_security">Sécurité</strong>
+                                <span data-i18n="project_education_security">Audit systématique SCA des dépendances pour protéger les données académiques sensibles.</span>
                             </div>
                         </div>
                     </div>
@@ -378,23 +385,23 @@
                         </div>
                         <div class="project-meta">
                             <h3>OpenZap</h3>
-                            <span class="project-type">Infrastructure de Communication Massive</span>
+                            <span class="project-type" data-i18n="project_openzap_type">Infrastructure de Communication Massive</span>
                         </div>
                     </div>
-                    <p class="project-desc">Solution SaaS d'orchestration de campagnes WhatsApp à grande échelle avec gestion de flux asynchrones.</p>
+                    <p class="project-desc" data-i18n="project_openzap_desc">Solution SaaS d'orchestration de campagnes WhatsApp à grande échelle avec gestion de flux asynchrones.</p>
                     <div class="project-highlights">
                         <div class="highlight">
                             <i class="ph ph-chart-line-up"></i>
                             <div>
-                                <strong>Performance</strong>
-                                <span>Flux asynchrones via Redis & Laravel Jobs pour des volumes massifs sans latence.</span>
+                                <strong data-i18n="project_highlight_performance">Performance</strong>
+                                <span data-i18n="project_openzap_performance">Flux asynchrones via Redis & Laravel Jobs pour des volumes massifs sans latence.</span>
                             </div>
                         </div>
                         <div class="highlight highlight-security">
                             <i class="ph ph-shield-check"></i>
                             <div>
-                                <strong>Sécurité</strong>
-                                <span>Algorithmes anti-bannissement et sécurisation des API endpoints.</span>
+                                <strong data-i18n="project_highlight_security">Sécurité</strong>
+                                <span data-i18n="project_openzap_security">Algorithmes anti-bannissement et sécurisation des API endpoints.</span>
                             </div>
                         </div>
                     </div>
@@ -420,16 +427,16 @@
                         </div>
                         <div class="project-meta">
                             <h3>ProDesign</h3>
-                            <span class="project-type">Automatisation Créative IA</span>
+                            <span class="project-type" data-i18n="project_prodesign_type">Automatisation Créative IA</span>
                         </div>
                     </div>
-                    <p class="project-desc">Plateforme haute performance pour agences créatives, combinant la rapidité de Rust et l'intelligence artificielle.</p>
+                    <p class="project-desc" data-i18n="project_prodesign_desc">Plateforme haute performance pour agences créatives, combinant la rapidité de Rust et l'intelligence artificielle.</p>
                     <div class="project-highlights">
                         <div class="highlight">
                             <i class="ph ph-cpu"></i>
                             <div>
-                                <strong>Technique</strong>
-                                <span>Hybridation Rust + IA (Python) + Interface React pour un rendu ultra-rapide.</span>
+                                <strong data-i18n="project_highlight_technical">Technique</strong>
+                                <span data-i18n="project_prodesign_technical">Hybridation Rust + IA (Python) + Interface React pour un rendu ultra-rapide.</span>
                             </div>
                         </div>
                     </div>
@@ -454,23 +461,23 @@
                         </div>
                         <div class="project-meta">
                             <h3>O-229 Marketplace</h3>
-                            <span class="project-type">E-commerce Local</span>
+                            <span class="project-type" data-i18n="project_marketplace_type">E-commerce Local</span>
                         </div>
                     </div>
-                    <p class="project-desc">Solution robuste de commerce électronique connectée à l'écosystème WhatsApp pour le Bénin.</p>
+                    <p class="project-desc" data-i18n="project_marketplace_desc">Solution robuste de commerce électronique connectée à l'écosystème WhatsApp pour le Bénin.</p>
                     <div class="project-highlights">
                         <div class="highlight">
                             <i class="ph ph-globe"></i>
                             <div>
-                                <strong>Impact</strong>
-                                <span>Intégration profonde WhatsApp pour transformer l'expérience d'achat au Bénin.</span>
+                                <strong data-i18n="project_highlight_impact">Impact</strong>
+                                <span data-i18n="project_marketplace_impact">Intégration profonde WhatsApp pour transformer l'expérience d'achat au Bénin.</span>
                             </div>
                         </div>
                         <div class="highlight highlight-security">
                             <i class="ph ph-git-branch"></i>
                             <div>
-                                <strong>DevOps</strong>
-                                <span>Pipeline CI/CD automatisé vers Vercel avec scan de vulnérabilités intégré.</span>
+                                <strong data-i18n="project_highlight_devops">DevOps</strong>
+                                <span data-i18n="project_marketplace_devops">Pipeline CI/CD automatisé vers Vercel avec scan de vulnérabilités intégré.</span>
                             </div>
                         </div>
                     </div>
@@ -496,16 +503,16 @@
                         </div>
                         <div class="project-meta">
                             <h3>DigiFix</h3>
-                            <span class="project-type">Gestion de Services Digitaux</span>
+                            <span class="project-type" data-i18n="project_digifix_type">Gestion de Services Digitaux</span>
                         </div>
                     </div>
-                    <p class="project-desc">Application conteneurisée pour la gestion de services avec parité parfaite dev/production.</p>
+                    <p class="project-desc" data-i18n="project_digifix_desc">Application conteneurisée pour la gestion de services avec parité parfaite dev/production.</p>
                     <div class="project-highlights">
                         <div class="highlight">
                             <i class="ph ph-cube"></i>
                             <div>
-                                <strong>Architecture</strong>
-                                <span>Stack moderne Laravel + React/Vite, entièrement conteneurisé avec Docker.</span>
+                                <strong data-i18n="project_highlight_architecture">Architecture</strong>
+                                <span data-i18n="project_digifix_architecture">Stack moderne Laravel + React/Vite, entièrement conteneurisé avec Docker.</span>
                             </div>
                         </div>
                     </div>
@@ -528,12 +535,12 @@
     <section id="philosophy" class="section philosophy-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><i class="ph ph-compass"></i> Philosophie</span>
-                <h2 class="section-title">Ma promesse : <span class="gradient-text">L'Excellence par la Rigueur</span></h2>
+                <span class="section-tag"><i class="ph ph-compass"></i> <span data-i18n="philosophy_tag">Philosophie</span></span>
+                <h2 class="section-title" data-i18n="philosophy_title">Ma promesse : <span class="gradient-text">L'Excellence par la Rigueur</span></h2>
             </div>
             <div class="philosophy-content">
                 <div class="philosophy-intro">
-                    <p>Chaque ligne de code que je pousse passe par un workflow rigoureux. Je ne livre pas du code qui "marche" — je livre du code <strong>industriel, sécurisé et conteneurisé</strong>. Le Vibe Coding me donne la vitesse, la rigueur me donne la fiabilité.</p>
+                    <p data-i18n="philosophy_intro">Chaque ligne de code que je pousse passe par un workflow rigoureux. Je ne livre pas du code qui "marche" — je livre du code <strong>industriel, sécurisé et conteneurisé</strong>. Le Vibe Coding me donne la vitesse, la rigueur me donne la fiabilité.</p>
                 </div>
                 <div class="workflow-steps">
                     <div class="workflow-step" data-step="01">
@@ -542,8 +549,8 @@
                             <i class="ph-fill ph-scan"></i>
                         </div>
                         <div class="step-content">
-                            <h3>Analyse Statique (SAST)</h3>
-                            <p>Chaque commit est scanné par Semgrep pour détecter les vulnérabilités avant qu'elles n'atteignent la production.</p>
+                            <h3 data-i18n="philosophy_sast_title">Analyse Statique (SAST)</h3>
+                            <p data-i18n="philosophy_sast_desc">Chaque commit est scanné par Semgrep pour détecter les vulnérabilités avant qu'elles n'atteignent la production.</p>
                         </div>
                         <div class="step-connector"></div>
                     </div>
@@ -553,8 +560,8 @@
                             <i class="ph-fill ph-package"></i>
                         </div>
                         <div class="step-content">
-                            <h3>Audit de Dépendances (SCA)</h3>
-                            <p>Snyk et Dependabot surveillent en continu chaque dépendance pour éviter les failles de la chaîne d'approvisionnement.</p>
+                            <h3 data-i18n="philosophy_sca_title">Audit de Dépendances (SCA)</h3>
+                            <p data-i18n="philosophy_sca_desc">Snyk et Dependabot surveillent en continu chaque dépendance pour éviter les failles de la chaîne d'approvisionnement.</p>
                         </div>
                         <div class="step-connector"></div>
                     </div>
@@ -564,8 +571,8 @@
                             <i class="ph-fill ph-activity"></i>
                         </div>
                         <div class="step-content">
-                            <h3>Monitoring 24/7</h3>
-                            <p>UptimeRobot et Fail2Ban garantissent un uptime maximal et une surveillance continue des menaces.</p>
+                            <h3 data-i18n="philosophy_monitoring_title">Monitoring 24/7</h3>
+                            <p data-i18n="philosophy_monitoring_desc">UptimeRobot et Fail2Ban garantissent un uptime maximal et une surveillance continue des menaces.</p>
                         </div>
                     </div>
                 </div>
@@ -577,17 +584,17 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag"><i class="ph ph-paper-plane-tilt"></i> Contact</span>
-                <h2 class="section-title">Prêt à <span class="gradient-text">collaborer</span> ?</h2>
-                <p class="section-desc">Que vous ayez besoin d'un SaaS sécurisé, d'une plateforme e-commerce ou d'un audit DevSecOps, discutons de votre projet.</p>
+                <span class="section-tag"><i class="ph ph-paper-plane-tilt"></i> <span data-i18n="contact_tag">Contact</span></span>
+                <h2 class="section-title" data-i18n="contact_title">Prêt à <span class="gradient-text">collaborer</span> ?</h2>
+                <p class="section-desc" data-i18n="contact_desc">Que vous ayez besoin d'un SaaS sécurisé, d'une plateforme e-commerce ou d'un audit DevSecOps, discutons de votre projet.</p>
             </div>
             <div class="cta-grid">
                 <a href="https://github.com/ayenamichel7-art" class="cta-card" id="cta-github" target="_blank" rel="noopener noreferrer">
                     <div class="cta-icon">
                         <i class="ph-fill ph-github-logo"></i>
                     </div>
-                    <h3>Explorer mon GitHub</h3>
-                    <p>Pour la preuve technique</p>
+                    <h3 data-i18n="contact_github_title">Explorer mon GitHub</h3>
+                    <p data-i18n="contact_github_desc">Pour la preuve technique</p>
                     <span class="cta-arrow">
                         <i class="ph ph-arrow-right"></i>
                     </span>
@@ -596,8 +603,8 @@
                     <div class="cta-icon">
                         <i class="ph-fill ph-whatsapp-logo"></i>
                     </div>
-                    <h3>Discutons sur WhatsApp</h3>
-                    <p>Pour le business</p>
+                    <h3 data-i18n="contact_whatsapp_title">Discutons sur WhatsApp</h3>
+                    <p data-i18n="contact_whatsapp_desc">Pour le business</p>
                     <span class="cta-arrow">
                         <i class="ph ph-arrow-right"></i>
                     </span>
@@ -606,8 +613,8 @@
                     <div class="cta-icon">
                         <i class="ph-fill ph-file-pdf"></i>
                     </div>
-                    <h3>Télécharger mon CV</h3>
-                    <p>Format DevSecOps</p>
+                    <h3 data-i18n="contact_cv_title">Télécharger mon CV</h3>
+                    <p data-i18n="contact_cv_desc">Format DevSecOps</p>
                     <span class="cta-arrow">
                         <i class="ph ph-download-simple"></i>
                     </span>
@@ -621,7 +628,7 @@
         <div class="container footer-content">
             <div class="footer-brand">
                 <span class="logo-bracket">&lt;</span>Michel AYENA<span class="logo-bracket">/&gt;</span>
-                <p>Fullstack Developer & DevSecOps Enthusiast</p>
+                <p data-i18n="footer_title">Fullstack Developer & DevSecOps Enthusiast</p>
             </div>
             <div class="footer-links">
                 <a href="https://github.com/ayenamichel7-art" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -637,7 +644,7 @@
                     <i class="ph ph-envelope-simple"></i>
                 </a>
             </div>
-            <p class="footer-copy">&copy; 2026 Michel AYENA — Construit avec passion & sécurité.</p>
+            <p class="footer-copy" data-i18n="footer_copy">&copy; 2026 Michel AYENA — Construit avec passion & sécurité.</p>
         </div>
     </footer>
 
