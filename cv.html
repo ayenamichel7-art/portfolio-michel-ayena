@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,19 +55,70 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .avatar-circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        .avatar-container {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
             background: linear-gradient(135deg, #6366f1, #06b6d4);
+            transition: transform 0.3s ease;
+        }
+
+        .avatar-container:hover .avatar-img {
+            transform: translateY(-5px);
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            background: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+            border: 2px solid #0f0f1a;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.5; }
+        }
+
+        .avatar-img:not([src]), .avatar-img[src=""] {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 12px;
-            font-size: 28px;
+            font-size: 48px;
             font-weight: 900;
             color: white;
-            letter-spacing: -1px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
         .sidebar-name {
@@ -446,17 +497,28 @@
 </head>
 <body>
     <!-- Language Switcher for CV -->
-    <div class="lang-switcher cv-lang-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 1000; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #ddd;">
-        <button class="lang-btn active" data-lang-switcher="fr" style="color: #333; padding: 5px 10px;">FR</button>
-        <span class="lang-divider" style="color: #ddd;">|</span>
-        <button class="lang-btn" data-lang-switcher="en" style="color: #333; padding: 5px 10px;">EN</button>
+    <div class="lang-switcher cv-lang-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 1000; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #ddd; border-radius: 8px; padding: 5px; display: flex; align-items: center; gap: 5px;">
+        <button class="lang-btn" data-lang-switcher="fr" style="color: #333; padding: 5px 12px; border: none; background: none; cursor: pointer; font-weight: 600;">FR</button>
+        <span class="lang-divider" style="color: #eee; width: 1px; height: 20px; background: #ddd;"></span>
+        <button class="lang-btn active" data-lang-switcher="en" style="color: #333; padding: 5px 12px; border: none; background: none; cursor: pointer; font-weight: 600;">EN</button>
+        <button onclick="window.print()" style="margin-left: 10px; background: #6366f1; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 13px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M224,96H192V40a16,16,0,0,0-16-16H80A16,16,0,0,0,64,40V96H32a16,16,0,0,0-16,16v80a16,16,0,0,0,16,16H64v16a16,16,0,0,0,16,16h96a16,16,0,0,0,16-16V208h32a16,16,0,0,0,16-16V112A16,16,0,0,0,224,96ZM80,40h96V96H80V40Zm96,200H80V176h96v64Zm48-48H192V160a16,16,0,0,0-16-16H80a16,16,0,0,0-16,16v32H32V112H224v80Z"></path></svg>
+            Print / PDF
+        </button>
     </div>
 
     <div class="cv-page">
         <!-- SIDEBAR -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <div class="avatar-circle">MA</div>
+                <div class="avatar-container">
+                    <img src="maphoto.jpeg" alt="Michel AYENA" class="avatar-img" onerror="this.style.display='none'; this.parentElement.querySelector('.fallback-avatar').style.display='flex';">
+                    <div class="fallback-avatar avatar-img" style="display:none;align-items:center;justify-content:center;font-size:48px;">MA</div>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        Available
+                    </div>
+                </div>
                 <div class="sidebar-name">Michel AYENA</div>
                 <div class="sidebar-title" data-i18n="cv_sidebar_subtitle">Fullstack Developer<br>& DevSecOps</div>
             </div>
@@ -688,6 +750,22 @@
                         <span class="project-stack-tag">React / Vite</span>
                         <span class="project-stack-tag">Docker</span>
                     </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="cv-section">
+                <h2 class="cv-section-title" data-i18n="cv_edu_title">Formation & Certifications</h2>
+                <div class="project-entry" style="border-left-color: #06b6d4;">
+                    <div class="project-entry-header">
+                        <span class="project-entry-title" data-i18n="cv_edu_degree">Diplôme d'Ingénieur / Licence en Informatique</span>
+                        <span class="project-entry-type">2021 — 2024</span>
+                    </div>
+                    <div class="project-entry-desc" data-i18n="cv_edu_school">Université / Institut Supérieur de Technologie</div>
+                    <ul class="project-entry-bullets">
+                        <li data-i18n="cv_edu_b1">Spécialisation en Développement Logiciel et Sécurité des Systèmes.</li>
+                        <li data-i18n="cv_edu_b2">Major de promotion en Algorithmique et Architecture Cloud.</li>
+                    </ul>
                 </div>
             </section>
 

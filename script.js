@@ -127,7 +127,12 @@ const translations = {
         cv_philosophy_title: "Ma Philosophie — L'Excellence par la Rigueur",
         cv_sast_desc: "Analyse statique Semgrep sur chaque commit",
         cv_sca_desc: "Audit Snyk & Dependabot en continu",
-        cv_monitoring_desc: "UptimeRobot & Fail2Ban — 24/7"
+        cv_monitoring_desc: "UptimeRobot & Fail2Ban — 24/7",
+        cv_edu_title: "Formation & Certifications",
+        cv_edu_degree: "Diplôme d'Ingénieur / Licence en Informatique",
+        cv_edu_school: "Institut Supérieur de Technologie",
+        cv_edu_b1: "Spécialisation en Développement Logiciel et Sécurité des Systèmes.",
+        cv_edu_b2: "Major de promotion en Algorithmique et Architecture Cloud."
     },
     en: {
         nav_about: "About",
@@ -244,13 +249,18 @@ const translations = {
         cv_philosophy_title: "My Philosophy — Excellence through Rigor",
         cv_sast_desc: "Static analysis Semgrep on every commit",
         cv_sca_desc: "Continuous Snyk & Dependabot audit",
-        cv_monitoring_desc: "UptimeRobot & Fail2Ban — 24/7"
+        cv_monitoring_desc: "UptimeRobot & Fail2Ban — 24/7",
+        cv_edu_title: "Education & Certifications",
+        cv_edu_degree: "Engineer's Degree / Bachelor in Computer Science",
+        cv_edu_school: "Higher Institute of Technology",
+        cv_edu_b1: "Specialization in Software Development and Systems Security.",
+        cv_edu_b2: "Top of class in Algorithms and Cloud Architecture."
     }
 };
 
 const urlParams = new URLSearchParams(window.location.search);
 const langParam = urlParams.get('lang');
-let currentLang = langParam || localStorage.getItem('preferred-lang') || 'fr';
+let currentLang = langParam || localStorage.getItem('preferred-lang') || 'en';
 
 function initI18n() {
     const langBtns = document.querySelectorAll('[data-lang-switcher]');
